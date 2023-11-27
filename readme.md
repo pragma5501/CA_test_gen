@@ -1,4 +1,4 @@
-컴퓨터 알고리즘 HW3 test case generator입니다.
+2023 DGIST 컴퓨터 알고리즘 HW3 test case generator입니다.
 현재 1번부터 5번까지 지원됩니다.
 
 Linux기준 입니다.
