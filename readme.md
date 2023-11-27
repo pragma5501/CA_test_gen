@@ -1,3 +1,5 @@
+컴퓨터 알고리즘 HW3 test case generator입니다.
+
 Linux기준 입니다.
 
 권한 부여와 실행
