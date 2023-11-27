@@ -1,4 +1,5 @@
 컴퓨터 알고리즘 HW3 test case generator입니다.
+현재 1번부터 4번까지만 지원됩니다.
 
 Linux기준 입니다.
 
