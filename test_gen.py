@@ -69,7 +69,37 @@ def generate_test_case4(n_max=100000):
     print(" ".join(map(str, animals)))
     for edge in edges:
         print(f"{edge[0]} {edge[1]}")
+def generate_test_case5():
+    # Generate number of pens (N) and number of possible connections (M)
+    N = random.randint(1, 100)
+    M = random.randint(1, N * (N - 1) // 2)
 
+    # Generate M connections with time T to move sheep between pens A and B
+    connections = set()
+    while len(connections) < M:
+        A = random.randint(1, N)
+        B = random.randint(1, N)
+        while A == B:
+            B = random.randint(1, N)
+        # Ensure A and B are in sorted order to prevent duplicates like (1, 2) and (2, 1)
+        A, B = sorted((A, B))
+        T = random.randint(1, 100)
+        connections.add((A, B, T))
+
+    # Generate number of infected pens (K) and their numbers
+    K = random.randint(0, N % 5)
+    infected_pens = random.sample(range(1, N + 1), K)
+
+    # Generate the number of the safe pen
+    safe_pen = random.randint(1, N)
+
+    # Print the test case
+    print(f"{N} {M}")
+    for connection in connections:
+        print(f"{connection[0]} {connection[1]} {connection[2]}")
+    print(K)
+    print(" ".join(map(str, infected_pens)))
+    print(safe_pen)
 
 if test_type == 1:
     generate_test_case1()
@@ -81,4 +111,4 @@ if test_type == 4:
     generate_test_case4()
     
 if test_type == 5:
-    pass
+    generate_test_case5()
